@@ -36,11 +36,7 @@ type CompilerFunction = (code: string, filename: string) => string;
  *  Options for creating a VM
  */
 export interface VMOptions {
-  /**
-   * `javascript` (default) or `coffeescript` or custom compiler function (which receives the code, and it's file path).
-   *  The library expects you to have coffee-script pre-installed if the compiler is set to `coffeescript`.
-   */
-  compiler?: "javascript" | "coffeescript" | CompilerFunction;
+  compiler?: "javascript";
   /** VM's global object. */
   sandbox?: any;
   /**
